@@ -1,0 +1,62 @@
+body {
+    height:100%;
+}
+
+#navbar-title {
+    display:inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    color:#268FFF;
+    font-weight:bold;
+}
+
+.container {
+    width:50%;
+    margin-top:75px;
+    margin-bottom:75px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.card-header {
+    background-color:#268FFF;
+    color:white;
+    font-weight:bold;
+}
+
+.btn-primary {
+    background-color:#268FFF;
+    color:white;
+}
+
+footer {
+    display: block;
+    position: fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        background-color:#268FFF;
+        color:white;
+        text-align:center;
+        padding: 10px 0px 10px 0px; 
+        font-weight:bold;
+}
+
+/* #navbar-title {
+
+    color:#268FFF;
+    font-weight:bold;
+} */
+
+<!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a id="navbar-title" href="#">
+            <i class="fas fa-hourglass-half"></i>
+            <!-- <img src="hourglassTemplate.png" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+            TimeTracker
+        </a>
+    </nav>
