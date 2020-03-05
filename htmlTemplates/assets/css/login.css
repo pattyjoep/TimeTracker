@@ -27,6 +27,13 @@ body {
     color:white;
     font-weight:bold;
 }
+.hidden {
+    visibility: hidden;
+}
+
+#password-prompt {
+    color:red;
+}
 
 .btn-primary {
     background-color:#268FFF;
@@ -45,18 +52,3 @@ footer {
         padding: 10px 0px 10px 0px; 
         font-weight:bold;
 }
-
-/* #navbar-title {
-
-    color:#268FFF;
-    font-weight:bold;
-} */
-
-<!-- Image and text -->
-    <nav class="navbar navbar-dark bg-dark">
-        <a id="navbar-title" href="#">
-            <i class="fas fa-hourglass-half"></i>
-            <!-- <img src="hourglassTemplate.png" width="30" height="30" class="d-inline-block align-top" alt=""> -->
-            TimeTracker
-        </a>
-    </nav>

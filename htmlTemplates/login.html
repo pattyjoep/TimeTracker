@@ -6,7 +6,7 @@
 
     <title>TimeTracker · Login</title>
     <!-- favicon -->
-    <link rel="icon" href="assets/FA/faviconDark.png" type="image/gif">
+    <link rel="icon" href="assets/fontAwesome/faviconDark.png" type="image/gif">
     <!-- jQuery & bootstrap JS -->
     <script src="assets/libraries/jquery-3.4.1.js"></script>
     <script src="assets/libraries/bootstrapJS.js"></script>
@@ -33,15 +33,16 @@
             <div class="card-body">
                 <form>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <label for="enter-email">Email address</label>
+                      <input type="email" class="form-control" id="enter-email" aria-describedby="emailHelp" placeholder="Enter email">
                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <label for="enter-password">Password</label>
+                      <input type="password" class="form-control" id="enter-password" placeholder="Password">
+                      <small id="password-prompt" class="form-text hidden">ERROR! Please enter Email & Password.</small>
                     </div>
-                    <button type="submit" id="login" class="btn btn-primary">Login</button>
+                    <button type="submit" id="login" class="btn btn-primary hidden">Login</button>
                   </form>
             </div>
           </div>
@@ -49,6 +50,7 @@
 
     
     <footer><i class="fas fa-hourglass-half"></i> TimeTracker &copy 2020</footer>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>
 
