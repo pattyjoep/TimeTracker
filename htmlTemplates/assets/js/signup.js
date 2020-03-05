@@ -14,10 +14,11 @@ $(document).ready(function() {
         if (enterPass.val() !== confirmPass.val()) {
             passPrompt.removeClass("hidden");
         } else {
-            passPrompt.addClass("hidden");
             signupBtn.removeClass("hidden");
+            passPrompt.addClass("hidden");
         }
     });
+    
     // end password-matching verification -------------------
     
 

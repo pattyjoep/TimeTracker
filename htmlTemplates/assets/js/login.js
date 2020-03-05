@@ -3,8 +3,14 @@ $(document).ready(function() {
     var password = $("#enter-password");
     var passPrompt = $("#password-prompt");
     var loginBtn = $("#login");
+    var signupLink = $("#signup-link");
 
+    email.on("keyup", function() {
+        signupLink.addClass("hidden");
+    });
+    
     password.on("keyup", function() {
+        signupLink.addClass("hidden");
         if (email.val() !== "" && password.val() !== "") {
             loginBtn.removeClass("hidden");
         } else {
@@ -13,7 +19,4 @@ $(document).ready(function() {
         }
     });
     
-
-
-
 });

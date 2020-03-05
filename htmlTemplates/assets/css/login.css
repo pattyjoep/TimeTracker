@@ -29,6 +29,7 @@ body {
 }
 .hidden {
     visibility: hidden;
+    /* display:none; */
 }
 
 #password-prompt {
