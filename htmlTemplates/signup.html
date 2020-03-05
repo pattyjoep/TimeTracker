@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TimeTracker · Sign Up</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/fontAwesome//faviconDark.png" type="image/gif">
+    <!-- jQuery & bootstrap JS -->
+    <script src="assets/libraries/jquery-3.4.1.js"></script>
+    <script src="assets/libraries/bootstrapJS.js"></script>
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrapCSS.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/5f1d56bd16.js" crossorigin="anonymous"></script>
+    <!-- propietary CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/signup.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a id="navbar-title" href="#">
+            <i class="fas fa-hourglass-half"></i>
+            TimeTracker · Sign Up
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+              Enter Email & Password
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="enter-password">Password</label>
+                      <input type="password" class="form-control" id="enter-password" placeholder="Password">
+                    </div>
+                    <div class="form-group fg-hide hidden">
+                        <label for="confirm-password">Re-enter Password</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Password">
+                        <small id="password-prompt" class="form-text hidden">ERROR! Passwords must match.</small>
+                    </div>
+                    <button type="submit" id="sign-up" class="btn btn-hide btn-primary hidden">Sign Up</button>
+                  </form>
+            </div>
+          </div>
+    </div>
+
+    
+    <footer><i class="fas fa-hourglass-half"></i> TimeTracker &copy 2020</footer>
+    <script src="assets/js/signup.js"></script>
+</body>
+</html>
+
+
