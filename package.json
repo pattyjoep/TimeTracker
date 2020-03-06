@@ -2,7 +2,7 @@
   "name": "timetracker",
   "version": "1.0.0",
   "description": "dependencies for TimeTraker application",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "npm run lint",
     "start": "node server.js",
