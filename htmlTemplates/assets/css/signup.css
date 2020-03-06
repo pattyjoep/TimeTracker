@@ -14,6 +14,10 @@ body {
     font-weight:bold;
 }
 
+img {
+    height:5rem;
+}
+
 .container {
     width:50%;
     margin-top:75px;

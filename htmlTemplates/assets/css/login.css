@@ -2,6 +2,7 @@ body {
     height:100%;
 }
 
+
 #navbar-title {
     display:inline-block;
     padding-top: 0.3125rem;
@@ -12,6 +13,9 @@ body {
     white-space: nowrap;
     color:#268FFF;
     font-weight:bold;
+}
+img {
+    height:5rem;
 }
 
 .container {
