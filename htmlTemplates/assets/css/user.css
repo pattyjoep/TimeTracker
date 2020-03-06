@@ -1,0 +1,96 @@
+body {
+    height:100%;
+}
+
+
+#navbar-title {
+    display:inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    color:#268FFF;
+    font-weight:bold;
+}
+img {
+    height:5rem;
+}
+
+
+
+.card-header {
+    background-color:#268FFF;
+    color:white;
+    font-weight:bold;
+}
+.hidden {
+    visibility: hidden;
+    /* display:none; */
+}
+
+
+
+.btn-primary {
+    background-color:#268FFF;
+    color:white;
+}
+
+footer {
+    display: block;
+    position: fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        background-color:#268FFF;
+        color:white;
+        text-align:center;
+        padding: 10px 0px 10px 0px; 
+        font-weight:bold;
+}
+
+
+
+
+/* styling for tree view */
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
