@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "password",
     "database": "time_veil_db",
     "host": "localhost",
     "dialect": "mysql"
