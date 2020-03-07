@@ -1,12 +1,6 @@
 $(document).on("ready", function() {
-    var toggler = $(".caret");
     
-    for (var i = 0; i < toggler.length; i++) {
-        toggler[i].on("click", function() {
-            $(this).parent.each(".nested ,.active").hasClass("active").toggle();
-            $(this).hasClass("caret-down").toggle();
-        })
-    }
+    
 
 });
 

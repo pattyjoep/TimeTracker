@@ -1,3 +1,10 @@
+.col, .col-md-3, .col-md-6 {
+  border: 1px solid black;
+}
+.container {
+  margin-top: 20px;
+  margin-bottom:20px;
+}
 body {
     height:100%;
 }
@@ -90,13 +97,14 @@ ul, #myUL {
   /* Style the caret/arrow */
   .caret {
     cursor: pointer;
-    user-select: none; /* Prevent text selection */
+    /* user-select: none; */
   }
   
   /* Create the caret/arrow with a unicode, and style it */
   .caret::before {
     content: "\25B6";
-    color: black;
+    color: #259b9e;
+    /* background-color:#259b9e; */
     display: inline-block;
     margin-right: 6px;
   }
