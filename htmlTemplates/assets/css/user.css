@@ -2,6 +2,9 @@ body {
     height:100%;
 }
 
+#new-navbar {
+  background-color:#c5dada;
+}
 
 #navbar-title {
     display:inline-block;
@@ -11,17 +14,17 @@ body {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
-    color:#268FFF;
+    color:#259b9e;
     font-weight:bold;
 }
 img {
-    height:5rem;
+  height:5rem;
 }
 
 
 
 .card-header {
-    background-color:#268FFF;
+  background-color:#259b9e;
     color:white;
     font-weight:bold;
 }
@@ -32,9 +35,10 @@ img {
 
 
 
-.btn-primary {
-    background-color:#268FFF;
-    color:white;
+.btn-propietary {
+  background-color:#259b9e;
+  color:white;
+  border: 1px solid #259b9e;
 }
 
 footer {
@@ -43,14 +47,31 @@ footer {
         left:0;
         bottom:0;
         width:100%;
-        background-color:#268FFF;
+        background-color:#259b9e;
         color:white;
         text-align:center;
         padding: 10px 0px 10px 0px; 
         font-weight:bold;
 }
 
+.btn-propietary:hover {
+  background-color: #177c7e;
+  border: 1px solid #259b9e;
+}
 
+.btn-propietary:active {
+  background-color: #0f6d6e;
+  border: 1px solid #259b9e;
+}
+
+.btn-propietary:visited {
+  background-color:#259b9e;
+  border: 1px solid #259b9e;
+}
+.btn-propietary:focus {
+  background-color:#259b9e;
+  border: 1px solid #259b9e;
+}
 
 
 /* styling for tree view */
