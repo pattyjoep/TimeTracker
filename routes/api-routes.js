@@ -13,7 +13,7 @@ module.exports = function(app) {
         Tasks: data
       };
       console.log(treeObject);
-      res.render("index", treeObject);
+      res.render("user", treeObject);
     });
   });
 
