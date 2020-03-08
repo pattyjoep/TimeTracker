@@ -8,16 +8,18 @@ module.exports = function(app) {
   app.get("/:username", function(req, res) {
     user.selectAll(function(data) {
       var treeObject = {
-        parents: data
+        clients: data,
+        projects: data,
+        tasks: data
       };
       console.log(treeObject);
       res.render("index", treeObject);
     });
   });
 
-  app.post("/api/users", function(req, res) {
-    
-  });
+  
+
+  
 
 
   // Using the passport.authenticate middleware with our local strategy.
