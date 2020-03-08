@@ -7,27 +7,38 @@ CREATE DATABASE time_veil_db;
 -- 	name VARCHAR(255) NOT NULL,
 -- 	PRIMARY KEY (id)
 -- );
--- CREATE TABLE customers (
--- 	id INTEGER(10) NOT NULL AUTO_INCREMENT,
--- 	name VARCHAR(255) NOT NULL,
---     email VARCHAR(255) NOT NULL,
---     address_street VARCHAR(255) NOT NULL,
---     address_city VARCHAR(255) NOT NULL,
---     address_state VARCHAR(255) NOT NULL,
---     phone VARCHAR(15) NOT NULL,
+
+
+-- CREATE TABLE clients (
+
+-- id INTEGER(10) NOT NULL AUTO_INCREMENT,
+-- client_name VARCHAR(255) NOT NULL,
+-- email VARCHAR(255) NOT NULL,
+-- address_street VARCHAR(255) NOT NULL,
+-- address_city VARCHAR(255) NOT NULL,
+-- address_state VARCHAR(255) NOT NULL,
+-- phone VARCHAR(15) NOT NULL,
 -- 	PRIMARY KEY (id)
 -- );
+
+
 -- CREATE TABLE projects (
+
 -- 	id INTEGER(10) NOT NULL AUTO_INCREMENT,
---     name VARCHAR(255) NOT NULL,
---     PRIMARY KEY (id)
+--  project_name VARCHAR(255) NOT NULL,
+--  PRIMARY KEY (id)
 -- );
+
+
 -- CREATE TABLE tasks (
+
 -- 	id INTEGER(10) NOT NULL AUTO_INCREMENT,
--- 	name VARCHAR(255) NOT NULL,
---     rate INTEGER(10) NOT NULL,
+-- 	task_name VARCHAR(255) NOT NULL,
+--  rate INTEGER(10) NOT NULL,
 -- 	PRIMARY KEY (id)
 -- );
+
+
 -- CREATE TABLE employees (
 -- 	id INTEGER(10) NOT NULL AUTO_INCREMENT,
 -- 	first_name VARCHAR(255) NOT NULL,
@@ -46,6 +57,8 @@ CREATE DATABASE time_veil_db;
 --     FOREIGN KEY (customerID) REFERENCES customers(id),
 --     FOREIGN KEY (taskID) REFERENCES tasks(id)
 -- );   
+
+
 -- CREATE TABLE restricted (
 -- 	id INTEGER(10) NOT NULL AUTO_INCREMENT,
 --     employeeID INTEGER(10) NOT NULL,
@@ -58,6 +71,8 @@ CREATE DATABASE time_veil_db;
 --     PRIMARY KEY (id),
 --     FOREIGN KEY (employeeID) REFERENCES employees(id)
 -- );
+
+
 -- CREATE TABLE time (
 -- 	id INTEGER(10) NOT NULL AUTO_INCREMENT,
 -- 	stap_in TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
