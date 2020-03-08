@@ -1,9 +1,10 @@
+/* eslint-disable camelcase */
 
-// Creating our Customers model
+// Creating our Clients model
 module.exports = function(sequelize, DataTypes) {
-  var Customers = sequelize.define("Customers", {
+  var Clients = sequelize.define("Clients", {
     // The email cannot be null, and must be a proper email before creation
-    name: {
+    Client_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -45,6 +46,6 @@ module.exports = function(sequelize, DataTypes) {
     },       
   });
     
-  return Customers;
+  return Clients;
 };
     
