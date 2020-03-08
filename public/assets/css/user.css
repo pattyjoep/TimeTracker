@@ -44,7 +44,7 @@ img {
 
 /* styling for nested list start */
 .green-white {
-  border-bottom:2px solid rgb(78, 75, 75);
+  border:2px solid rgb(78, 75, 75);
   background-color:#259b9e;
   color:white;
   text-align:center;

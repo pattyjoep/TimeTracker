@@ -1,0 +1,88 @@
+<nav id="new-navbar" class="navbar">
+      <img src="/assets/logos/LogoFinal.png">
+      
+        <div id="navbar-title" > 
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-propietary start-timer">Start Timer</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-danger stop-timer">Stop Timer</button>
+                </div>
+                <div class="col">00:00</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="list-group list-group-root well"><h3 class="green-white">Clients</h3>
+
+                    {{#each clients}}
+                        <a href="#item-1" data-id="{{id}}" class="list-group-item client" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-chevron-right"></i>{{client_name}}
+                        </a>
+
+                        <div class="list-group collapse" id="item-1">
+                            {{#each projects}}
+                                <a href="#item-1-1" data-id="{{id}}" class="project list-group-item" data-toggle="collapse">
+                                    <i class="glyphicon glyphicon-chevron-right"></i>{{project_name}}
+                                </a>
+
+                                <div class="list-group collapse" id="item-1-1">
+                                    {{#each tasks}}
+                                        <button class="task btn-propietary list-group-item" data-id="{{id}}">{{task_name}}</button>
+                                    {{/each}}
+                                    {{!-- add new Task  --}}
+                                    <div class="input-group">
+                                        <input type="text" class="add-task-input form-control" placeholder="Add Task">
+                                        <span class="input-group-btn">
+                                            <button class="add-task-btn btn btn-propietary" type="button">+</button>
+                                        </span>
+                                    </div>
+                                    {{!-- add new Task  --}}
+                                </div>
+                            {{/each}}
+                            {{!-- end project section --}}
+
+                            {{!-- add new project  --}}
+                            <div class="input-group">
+                                <input type="text" class="add-project-input form-control" placeholder="Add Project">
+                                <span class="input-group-btn">
+                                    <button class="add-project-btn btn btn-propietary" type="button">+</button>
+                                </span>
+                            </div>
+                            {{!-- add new project  --}}
+                        
+                        </div>
+                        {{!-- end client 1 --}}
+
+                    {{/each}}
+                    {{!-- end client section --}}
+
+                    {{!-- add new Client  --}}
+                    <div class="input-group">
+                        <input type="text" class="add-client-input form-control" placeholder="Add Client">
+                        <span class="input-group-btn">
+                            <button class="add-client-btn btn btn-propietary" type="button">+</button>
+                        </span>
+                    </div>
+                    {{!-- add new Client  --}}
+                    
+                </div>
+                {{!-- end list-group-root --}}
+                      
+            </div>
+            {{!-- end col-md-4 --}}
+
+            <div class="col-md-8">
+                main display
+            </div>
+
+        </div>
+    </div>
+    
+    <footer>TimeVeil &copy 2020</footer>
+    <script src="/assets/js/user.js"></script>
