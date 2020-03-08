@@ -1,9 +1,9 @@
-.col, .col-md-3, .col-md-6 {
+/* .col, .col-md-4, .col-md-8 {
   border: 1px solid black;
-}
+} */
 .container {
   margin-top: 20px;
-  margin-bottom:20px;
+  margin-bottom:100px;
 }
 body {
     height:100%;
@@ -11,6 +11,7 @@ body {
 
 #new-navbar {
   background-color:#c5dada;
+  border-bottom:3px solid rgb(78, 75, 75);
 }
 
 #navbar-title {
@@ -41,14 +42,84 @@ img {
 }
 
 
+/* styling for nested list start */
+.green-white {
+  border-bottom:2px solid rgb(78, 75, 75);
+  background-color:#259b9e;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-bottom:0px;
+}
+.client {
+  font-size:20px;
+  font-weight:bold;
+}
+
+a {
+  color:#259b9e;
+  font-weight:bold; 
+}
+a:hover {
+  color:#177c7e;
+}
+
+.just-padding {
+  padding: 15px;
+}
+
+.list-group.list-group-root {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-group.list-group-root .list-group {
+  margin-bottom: 0;
+}
+
+.list-group.list-group-root .list-group-item {
+  border-radius: 0;
+  border-width: 1px 0 0 0;
+}
+
+.list-group.list-group-root > .list-group-item:first-child {
+  border-top-width: 0;
+}
+
+.list-group.list-group-root > .list-group > .list-group-item {
+  padding-left: 30px;
+}
+
+.list-group.list-group-root > .list-group > .list-group > .list-group-item {
+  padding-left: 45px;
+}
+
+.list-group-item .glyphicon {
+  margin-right: 5px;
+}
+
+
+/* styling for nested list end */
+
+
+.green {
+  color: #259b9e;
+  font-weight:bold;
+}
 
 .btn-propietary {
   background-color:#259b9e;
   color:white;
   border: 1px solid #259b9e;
+  /* margin-top:5px; */
+  margin-bottom:5px;
 }
 
 footer {
+    margin-top:80px;
+    border-top:3px solid rgb(78, 75, 75);
     display: block;
     position: fixed;
         left:0;
@@ -81,45 +152,3 @@ footer {
 }
 
 
-/* styling for tree view */
-
-/* Remove default bullets */
-ul, #myUL {
-    list-style-type: none;
-  }
-  
-  /* Remove margins and padding from the parent ul */
-  #myUL {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Style the caret/arrow */
-  .caret {
-    cursor: pointer;
-    /* user-select: none; */
-  }
-  
-  /* Create the caret/arrow with a unicode, and style it */
-  .caret::before {
-    content: "\25B6";
-    color: #259b9e;
-    /* background-color:#259b9e; */
-    display: inline-block;
-    margin-right: 6px;
-  }
-  
-  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-  .caret-down::before {
-    transform: rotate(90deg);
-  }
-  
-  /* Hide the nested list */
-  .nested {
-    display: none;
-  }
-  
-  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-  .active {
-    display: block;
-  }

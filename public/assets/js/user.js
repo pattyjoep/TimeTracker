@@ -1,5 +1,36 @@
+/* eslint-disable indent */
 $(document).on("ready", function() {
     
+    // nested list start --------------------------------------------
+
+    $(".list-group-item").on("click", function() {
+        $(".glyphicon", this)
+          .toggleClass("glyphicon-chevron-right")
+          .toggleClass("glyphicon-chevron-down");
+      });
+
+
+
+
+
+
+
+
+
+    
+    // nested list end ----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 });
