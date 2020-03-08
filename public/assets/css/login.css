@@ -3,6 +3,7 @@ body {
 }
 #new-navbar {
     background-color:#c5dada;
+    border-bottom:3px solid rgb(78, 75, 75);
 }
 
 #navbar-title {
@@ -48,7 +49,9 @@ img {
     border: 1px solid #259b9e;
   }
 
-footer {
+  footer {
+    margin-top:80px;
+    border-top:3px solid rgb(78, 75, 75);
     display: block;
     position: fixed;
         left:0;
