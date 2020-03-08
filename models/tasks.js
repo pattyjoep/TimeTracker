@@ -1,8 +1,9 @@
+/* eslint-disable camelcase */
 
 // Creating our Tasks model
 module.exports = function(sequelize, DataTypes) {
   var Tasks = sequelize.define("Tasks", {
-    title: {
+    Task_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
