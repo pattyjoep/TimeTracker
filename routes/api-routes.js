@@ -8,9 +8,9 @@ module.exports = function(app) {
   app.get("/:username", function(req, res) {
     user.selectAll(function(data) {
       var treeObject = {
-        clients: data,
-        projects: data,
-        tasks: data
+        Clients: data,
+        Projects: data,
+        Tasks: data
       };
       console.log(treeObject);
       res.render("index", treeObject);
