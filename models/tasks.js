@@ -10,6 +10,13 @@ module.exports = function(sequelize, DataTypes) {
     assignedTo: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    date: {
+      type: DataTypes.Date,
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+    },
+    hoursWorked: {
+      type: DataTypes.INTEGER
     }
   });
 
