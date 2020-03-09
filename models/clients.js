@@ -47,6 +47,12 @@ module.exports = function(sequelize, DataTypes) {
   });
   
     
+  Clients.associate = function(models) {
+    Clients.hasMany(models.Projects, {
+      onDelete: "cascade"
+    });
+  };
+  
   return Clients;
 };
     
