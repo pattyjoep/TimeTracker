@@ -21,6 +21,11 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Tasks.associate = function(models) {
+    Tasks.belongsTo(models.Users, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
     Tasks.belongsTo(models.Projects, {
       foreignKey: {
         allowNull: false
@@ -28,19 +33,19 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  Tasks.associate = function(models) {
-    Tasks.belongsTo(models.Users, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // Tasks.associate = function(models) {
+  //   Tasks.belongsTo(models.Users, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
 
-  Tasks.associate = function(models) {
-    Tasks.hasMany(models.Times, {
-      onDelete: "cascade"
-    });
-  };
+  // Tasks.associate = function(models) {
+  //   Tasks.hasMany(models.Times, {
+  //     onDelete: "cascade"
+  //   });
+  // };
   
   return Tasks;
 };
