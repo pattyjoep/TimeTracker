@@ -78,8 +78,28 @@
             {{!-- end col-md-4 --}}
 
             <div class="col-md-8">
-                main display
+                <table class="table table-striped green">
+                    <thead>
+                      <tr>
+                        <th scope="col"><h4>Id</h4></th>
+                        <th scope="col"><h4>Task</h4></th>
+                        <th scope="col"><h4>Date</h4></th>
+                        <th scope="col"><h4>Hours</h4></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{#each Tasks}}
+                            <tr>
+                                <th scope="row">{{id}}</th>
+                                <td>{{task_name}}</td>
+                                <td>{{date}}</td>
+                                <td>{{hoursWorked}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
             </div>
+            {{!-- end col-md-8 --}}
 
         </div>
     </div>
