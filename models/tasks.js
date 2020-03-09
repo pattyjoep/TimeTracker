@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     date: {
-      type: DataTypes.Date,
+      type: DataTypes.DATEONLY,
       defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
     },
     hoursWorked: {
