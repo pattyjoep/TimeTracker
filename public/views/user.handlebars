@@ -50,10 +50,39 @@
 
                             {{!-- add new project  --}}
                             <div class="input-group">
-                                {{!-- <input type="text" class="add-project-input form-control" placeholder="Add Project"> --}}
                                 <span class="input-group-btn">
-                                    <button class="add-project-btn btn btn-propietary" type="button">+Add Project</button>
+                                    <button type="button" class="add-project-btn btn btn-propietary" data-toggle="modal" data-target="#project-modal" type="button">+Add Project</button>
                                 </span>
+                                
+                                {{!-- Modal --}}
+                                <div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal-title" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title green" id="project-modal-title">Add Project Details</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{!-- project form here --}}
+                                                <form class="green">
+                                                    <div class="form-row">
+                                                        <div class="form group col-md-12">
+                                                            <label for="new-project-name">Project Name</label>
+                                                            <input type="text" class="form-control" id="new-project-name" placeholder="Name">
+                                                        </div>
+                                                    </div>                                                    
+                                                </form>
+                                                {{!-- project form here --}}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-propietary project-modal-save">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             {{!-- add new project  --}}
                         
