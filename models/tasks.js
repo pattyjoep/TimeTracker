@@ -7,45 +7,31 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    assignedTo: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    date: {
-      type: DataTypes.DATE,
-      //defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
-    },
     hoursWorked: {
       type: DataTypes.INTEGER
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
     }
   });
 
   Tasks.associate = function(models) {
     Tasks.belongsTo(models.Users, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
     Tasks.belongsTo(models.Projects, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };
-
-  // Tasks.associate = function(models) {
-  //   Tasks.belongsTo(models.Users, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
-
-  // Tasks.associate = function(models) {
-  //   Tasks.hasMany(models.Times, {
-  //     onDelete: "cascade"
-  //   });
-  // };
   
   return Tasks;
 };
