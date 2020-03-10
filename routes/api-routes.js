@@ -5,7 +5,7 @@ var passport = require("../config/passport");
 module.exports = function(app) {
 
   // route for handlebars
-  app.get("/:username", function(req, res) {
+  app.get("/:id", function(req, res) {
     user.selectAll(function(data) {
       var treeObject = {
         Clients: data,
