@@ -44,6 +44,12 @@ module.exports = function(sequelize, DataTypes) {
       onDelete: "cascade"
     });
   };
+  Users.hasMany(models.Tasks, {
+    onDelete: "cascade"
+  });
+
 
   return Users;
+
 };
+

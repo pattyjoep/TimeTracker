@@ -53,6 +53,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
     }     
   });
+  
     
   Clients.associate = function(models) {
     Clients.hasMany(models.Projects, {

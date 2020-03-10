@@ -28,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
     });
     Tasks.belongsTo(models.Projects, {
       foreignKey: {
-        allowNull: true
+        allowNull: false
       }
     });
   };
