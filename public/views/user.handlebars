@@ -39,10 +39,40 @@
                                     {{/each}}
                                     {{!-- add new Task  --}}
                                     <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <button class="add-task-btn btn btn-propietary" type="button">+Add Task</button>
-                                        </span>
+                                <span class="input-group-btn">
+                                    <button type="button" class="add-task-btn btn btn-propietary" data-toggle="modal" data-target="#task-modal" type="button">+Add Task</button>
+                                </span>
+                                
+                                {{!-- Modal --}}
+                                <div class="modal fade" id="task-modal" tabindex="-1" role="dialog" aria-labelledby="task-modal-title" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title green" id="task-modal-title">Add Task Details</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{!-- task form here  --}}
+                                                <form class="green">
+                                                    <div class="form-row">
+                                                        <div class="form group col-md-12">
+                                                            <label for="new-task-name">Task Name</label>
+                                                            <input type="text" class="form-control" id="new-task-name" placeholder="Name">
+                                                        </div>
+                                                    </div>                                                    
+                                                </form>
+                                                {{!-- task form here  --}}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-propietary task-modal-save">Save changes</button>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
                                     {{!-- add new Task  --}}
                                 </div>
                             {{/each}}

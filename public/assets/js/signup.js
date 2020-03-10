@@ -18,7 +18,7 @@ $(document).ready(function() {
             passPrompt.addClass("hidden");
         }
     });
-    
+
     // end password-matching verification -------------------
     
 
