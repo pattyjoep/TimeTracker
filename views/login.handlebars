@@ -1,0 +1,34 @@
+<nav id="new-navbar" class="navbar">
+      <img src="/assets/logos/LogoFinal.png">
+      <a id="navbar-title" href="#">
+          Login
+      </a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+              Enter Email & Password
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                      <label for="enter-email">Email address</label>
+                      <input type="email" class="form-control" id="enter-email" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="enter-password">Password</label>
+                      <input type="password" class="form-control" id="enter-password" placeholder="Password">
+                      <small id="password-prompt" class="form-text hidden">ERROR! Please enter Email & Password.</small>
+                    </div>
+                    <button type="submit" id="login" class="btn btn-propietary hidden">Login</button>
+                    <p id="signup-link" class="">Don't have an account yet? <a href="/views/signup.handlebars">Sign-Up</a> now!</p>
+                  </form>
+            </div>
+          </div>
+    </div>
+
+    
+    <footer>TimeVeil &copy 2020</footer>
+    <script src="/assets/js/login.js"></script>
