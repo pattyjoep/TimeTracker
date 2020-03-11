@@ -5,18 +5,18 @@ var passport = require("../config/passport");
 module.exports = function(app) {
 
   // route for handlebars
-  app.get("/:username", function(req, res) {
+  app.get("/:id", function(req, res) {
     db.Users.findAll({
       where: {
         id: req.params.id
       }
-    }).then(function(data) {
-      var treeObject = {
-        Tasks: data
-      };
+    }).then(function(Tasks) {
+      // var treeObject = {
+      //   Tasks: data
+      // };
 
-      console.log(treeObject);
-      res.render("user", treeObject);
+      // console.log(treeObject);
+      res.render("user", Tasks);
     });
   });
 
