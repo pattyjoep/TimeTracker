@@ -41,6 +41,7 @@ $(document).ready(function() {
       email: emailInput,
       password: passwordInput
     })
+    
       .then(function() {
         window.location.replace("/members");
         // If there's an error, log the error
