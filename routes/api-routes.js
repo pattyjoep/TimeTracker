@@ -6,12 +6,11 @@ module.exports = function(app) {
 
   // route for handlebars
   app.get("/:id", function(req, res) {
-    user.selectAll(function(data) {
+    Users.selectAll(function(data) {
       var treeObject = {
-        Clients: data,
-        Projects: data,
         Tasks: data
       };
+
       console.log(treeObject);
       res.render("user", treeObject);
     });
@@ -29,7 +28,7 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
-    db.User.create({
+    db.Users.create({
       email: req.body.email,
       password: req.body.password
     })
