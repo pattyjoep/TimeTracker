@@ -6,7 +6,7 @@ module.exports = function(app) {
 
   // route for handlebars
   app.get("/:username", function(req, res) {
-    Users.selectAll({
+    db.Users.findAll({
       where: {
         id: req.params.id
       }
@@ -33,7 +33,7 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     db.Users.create({
-      email: req.body.email,
+      username: req.body.email,
       password: req.body.password
     })
       .then(function() {
