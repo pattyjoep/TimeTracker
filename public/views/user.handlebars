@@ -1,5 +1,23 @@
-<nav id="new-navbar" class="navbar">
-      <img src="/assets/logos/LogoFinal.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TimeVeil · User</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/logos/FinalFavicon.png" type="image/gif">
+    <!-- jQuery & bootstrap JS -->
+    <script src="assets/libraries/jquery-3.4.1.js"></script>
+    <script src="assets/libraries/bootstrapJS.js"></script>
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrapCSS.css">
+    <!-- propietary CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/user.css">
+</head>
+<body>
+    <nav id="new-navbar" class="navbar">
+      <img src="assets/logos/LogoFinal.png">
       
         <div id="navbar-title" > 
             <div class="row">
@@ -18,222 +36,99 @@
         <div class="row">
             <div class="col-md-4">
 
-                <div class="list-group list-group-root well"><h3 class="green-white">Clients</h3>
-
-                    {{#each Clients}}
-                        <a href="#item-1" data-id="{{id}}" class="list-group-item client" data-toggle="collapse">
-                            <i class="glyphicon glyphicon-chevron-right"></i>{{Client_name}}
+                <div class="list-group list-group-root well"><h3 class="green-white">Tasks</h3>
+                    
+                    <a href="#item-1" class="list-group-item client" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Task List
+                    </a>
+                    <div class="list-group collapse" id="item-1">
+                        {{#each Tasks}}
+                        <a href="#item-1-1" class="list-group-item" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-chevron-right"></i>{{Task_name}}
                         </a>
-
-                        <div class="list-group collapse" id="item-1">
-                            {{#each Projects}}
-                                <a href="#item-1-1" data-id="{{id}}" class="project list-group-item" data-toggle="collapse">
-                                    <i class="glyphicon glyphicon-chevron-right"></i>{{Project_name}}
-                                </a>
-
-                                <div class="list-group collapse" id="item-1-1">
-                                    {{#each Tasks}}
-                                    <div class="input-group">
-                                        <button class="task btn btn-propietary" data-id="{{id}}">{{Task_name}}</button>
-                                    </div>
-                                    {{/each}}
-                                    {{!-- add new Task  --}}
-                                    <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button type="button" class="add-task-btn btn btn-propietary" data-toggle="modal" data-target="#task-modal" type="button">+Add Task</button>
-                                </span>
-                                
-                                {{!-- Modal --}}
-                                <div class="modal fade" id="task-modal" tabindex="-1" role="dialog" aria-labelledby="task-modal-title" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title green" id="task-modal-title">Add Task Details</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                {{!-- task form here  --}}
-                                                <form class="green">
-                                                    <div class="form-row">
-                                                        <div class="form group col-md-12">
-                                                            <label for="new-task-name">Task Name</label>
-                                                            <input type="text" class="form-control" id="new-task-name" placeholder="Name">
-                                                        </div>
-                                                    </div>                                                    
-                                                </form>
-                                                {{!-- task form here  --}}
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-propietary task-modal-save">Save changes</button>
-                                            </div>
+                        {{/each}}
+                        <!-- add new Task -->
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="add-task-btn btn btn-propietary" data-toggle="modal" data-target="#task-modal" type="button">+Add Task</button>
+                            </span>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="task-modal" tabindex="-1" role="dialog" aria-labelledby="task-modal-title" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title green" id="task-modal-title">Add Task Details</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- task form here -->
+                                            <form class="green">
+                                                <div class="form-row">
+                                                    <div class="form group col-md-12">
+                                                        <label for="new-task-name">Task Name</label>
+                                                        <input type="text" class="form-control" id="new-task-name" placeholder="Name">
+                                                    </div>
+                                                </div>                                                    
+                                            </form>
+                                            <!-- task form here -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-propietary task-modal-save">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                    {{!-- add new Task  --}}
-                                </div>
-                            {{/each}}
-                            {{!-- end project section --}}
-
-                            {{!-- add new project  --}}
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button type="button" class="add-project-btn btn btn-propietary" data-toggle="modal" data-target="#project-modal" type="button">+Add Project</button>
-                                </span>
-                                
-                                {{!-- Modal --}}
-                                <div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal-title" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title green" id="project-modal-title">Add Project Details</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                {{!-- project form here --}}
-                                                <form class="green">
-                                                    <div class="form-row">
-                                                        <div class="form group col-md-12">
-                                                            <label for="new-project-name">Project Name</label>
-                                                            <input type="text" class="form-control" id="new-project-name" placeholder="Name">
-                                                        </div>
-                                                    </div>                                                    
-                                                </form>
-                                                {{!-- project form here --}}
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-propietary project-modal-save">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{!-- add new project  --}}
-                        
-                        </div>
-                        {{!-- end client 1 --}}
-
-                    {{/each}}
-                    {{!-- end client section --}}
-
-                    {{!-- add new Client  --}}
-                    <div class="input-group">
-                        {{!-- <input type="text" class="form-control" placeholder="Add Client">  --}}
-                        <span class="input-group-btn">
-                            <button type="button" class="add-client-btn btn btn-propietary" data-toggle="modal" data-target="#client-modal" type="button">+Add Client</button>
-                        </span>
-                        
-                        {{!-- Modal --}}
-                        <div class="modal fade" id="client-modal" tabindex="-1" role="dialog" aria-labelledby="client-modal-title" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title green" id="client-modal-title">Add Client Details</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                </div>
-                                <div class="modal-body">
-                                    {{!-- client form here --}}
-                                    <form class="green">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="new-client-name">Client Name</label>
-                                                <input type="text" class="form-control" id="new-client-name" placeholder="Name">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="inputEmail4">Client Email</label>
-                                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress">Address</label>
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress2">Address 2</label>
-                                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="inputCity">City</label>
-                                                <input type="text" class="form-control" id="inputCity">
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputState">State</label>
-                                                <select id="inputState" class="form-control">
-                                                <option selected>Choose...</option>
-                                                <option>...</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-2">
-                                                <label for="inputZip">Zip</label>
-                                                <input type="text" class="form-control" id="inputZip">
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-8">
-                                                <label for="inputCity">Country</label>
-                                                <input type="text" class="form-control" id="inputCountry">
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputPhone">Phone</label>
-                                                <input type="text" class="form-control" id="inputPhone">
-                                            </div>
-                                        </div>
-                                            
-                                    </form>
-
-                                    {{!-- client form here --}}
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-propietary client-modal-save">Save changes</button>
-                                </div>
-                            </div>
                             </div>
                         </div>
+                        <!-- add new Task -->
+                        
                     </div>
-                    {{!-- add new Client  --}}
+                    <!-- end client 1 -->
                     
                 </div>
-                {{!-- end list-group-root --}}
+                <!-- end list-group-root -->
                       
             </div>
-            {{!-- end col-md-4 --}}
+            <!-- end col-md-4 -->
 
             <div class="col-md-8">
                 <table class="table table-striped green">
                     <thead>
-                      <tr>
-                        <th scope="col"><h4>Id</h4></th>
+                      <tr class="">
+                        <th scope="col"><h4>#</h4></th>
                         <th scope="col"><h4>Task</h4></th>
                         <th scope="col"><h4>Date</h4></th>
                         <th scope="col"><h4>Hours</h4></th>
                       </tr>
                     </thead>
                     <tbody>
-                        {{#each Tasks}}
-                            <tr>
-                                <th scope="row">{{id}}</th>
-                                <td>{{task_name}}</td>
-                                <td>{{date}}</td>
-                                <td>{{hoursWorked}}</td>
-                            </tr>
-                        {{/each}}
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Make Billboards</td>
+                        <td>3/15/20</td>
+                        <td>4</td>
+                      </tr>
+                      
                     </tbody>
                 </table>
             </div>
-            {{!-- end col-md-8 --}}
-
+            <!-- end column -->
         </div>
     </div>
     
     <footer>TimeVeil &copy 2020</footer>
-    <script src="/assets/js/user.js"></script>
+    <script src="assets/js/user.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

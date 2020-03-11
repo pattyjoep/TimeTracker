@@ -19,20 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
     }
   });
-
-  Tasks.associate = function(models) {
-    Tasks.belongsTo(models.Users, {
-      foreignKey: {
-        allowNull: true
-      }
-    });
-    Tasks.belongsTo(models.Projects, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
-  
+    
   return Tasks;
 };
   

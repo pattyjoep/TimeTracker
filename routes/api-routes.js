@@ -6,12 +6,15 @@ module.exports = function(app) {
 
   // route for handlebars
   app.get("/:username", function(req, res) {
-    user.selectAll(function(data) {
+    Users.selectAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
       var treeObject = {
-        Clients: data,
-        Projects: data,
         Tasks: data
       };
+
       console.log(treeObject);
       res.render("user", treeObject);
     });
@@ -30,7 +33,7 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     db.Users.create({
-      username: req.body.email,
+      email: req.body.email,
       password: req.body.password
     })
       .then(function() {
