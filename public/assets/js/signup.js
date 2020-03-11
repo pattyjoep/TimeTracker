@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 // variables for password-matching verification
+  var email = $("#email");
   var enterPass = $("#enter-password");
   var confirmPass = $("#confirm-password");
   var passPrompt = $("#password-prompt");
@@ -33,7 +34,7 @@ $(document).ready(function() {
     }
     signUpUser(userData.email, userData.password);
     email.val("");
-    password.val("");
+    enterPass.val("");
   }); 
   function signUpUser(email, password) {
     $.post("/api/signup", {
