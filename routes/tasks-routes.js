@@ -18,5 +18,15 @@ module.exports = function(app) {
       res.json(dbTasks);
     });
   });
+
+  app.post("/tasks", function(req, res) {
+    db.Tasks.create({
+      "Task_name": req.body.Task_name,
+      "hoursWorked": req.body.hoursWorked
+    }, function(result) {
+      // Send back the ID of the new task
+      res.json({ id: result.insertId });
+    });
+  });
   
 };
