@@ -43,7 +43,7 @@ $(document).ready(function() {
     })
     
       .then(function() {
-        window.location.replace("/members");
+        window.location.replace("/views/user");
         // If there's an error, log the error
       })
       .catch(function(err) {
