@@ -1,11 +1,12 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+// var emailPrompt = require("../public/assets/js/signup")
 
 module.exports = function(app) {
 
   // route for handlebars
-  app.get("/:id", function(req, res) {
+  app.get("/users/:id", function(req, res) {
     db.Users.findAll({
       where: {
         id: req.params.id
@@ -40,6 +41,8 @@ module.exports = function(app) {
         res.redirect(307, "/api/login");
       })
       .catch(function(err) {
+        
+        console.log(err);
         res.status(401).json(err);
       });
   });

@@ -11,7 +11,16 @@ module.exports = function(app) {
     if (req.users) {
       res.redirect("/user");
     }
-    res.sendFile(path.join(__dirname, "../views/signup.handlebars"));
+    res.render("../views/signup.handlebars");
+  });
+
+  app.get("/signup", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.users) {
+      res.redirect("/members");
+    }
+    res.render("../views/signup");
+    // res.sendFile(path.join(__dirname, "../views/login.handlebars"));
   });
 
   app.get("/login", function(req, res) {

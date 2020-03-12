@@ -7,6 +7,9 @@ $(document).ready(function() {
   var passPrompt = $("#password-prompt");
   var signupBtn = $("#sign-up");
 
+
+  
+
   enterPass.on("keyup", function() {
     $(".fg-hide").removeClass("hidden");
   });
@@ -36,6 +39,8 @@ $(document).ready(function() {
     email.val("");
     enterPass.val("");
   }); 
+
+
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
@@ -56,3 +61,7 @@ $(document).ready(function() {
 
 
 });
+// var emailErrorMessage = function() {
+//   $("#email-prompt").removeClass("hidden");
+// };
+// module.exports = emailErrorMessage;

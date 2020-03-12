@@ -42,6 +42,9 @@ img {
     /* display:none; */
 }
 
+#email-prompt {
+    color:red;
+}
 #password-prompt {
     color:red;
 }
