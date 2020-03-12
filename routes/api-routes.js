@@ -10,13 +10,13 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(Tasks) {
-      // var treeObject = {
-      //   Tasks: data
-      // };
+    }).then(function(data) {
+      var treeObject = {
+        Tasks: data
+      };
 
-      // console.log(treeObject);
-      res.render("user", Tasks);
+      console.log(treeObject);
+      res.render("user", treeObject);
     });
   });
 

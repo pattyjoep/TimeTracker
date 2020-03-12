@@ -43,9 +43,12 @@
                     </a>
                     <div class="list-group collapse" id="item-1">
                         {{#each Tasks}}
-                        <a href="#item-1-1" class="list-group-item" data-toggle="collapse">
+                        
+                        <a href="#item-1-1" class="list-group-item" data-toggle="collapse" data-id="id">
                             <i class="glyphicon glyphicon-chevron-right"></i>{{Task_name}}
                         </a>
+                        
+                        
                         {{/each}}
                         <!-- add new Task -->
                         <div class="input-group">
