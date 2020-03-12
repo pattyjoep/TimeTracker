@@ -17,6 +17,6 @@ module.exports = function(app) {
     }).then(function(dbUsers) {
       res.json(dbUsers);
     });
-  });
+  });  
   
 };
