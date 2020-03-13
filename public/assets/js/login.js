@@ -42,8 +42,9 @@ $(document).ready(function() {
       password: passwordInput
     })
     
-      .then(function() {
-        window.location.replace("/views/user");
+      .then(function(res) {
+        console.log(res);
+        window.location.replace("/users/" + res);
         // If there's an error, log the error
       })
       .catch(function(err) {

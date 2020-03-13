@@ -7,9 +7,9 @@ module.exports = function(app) {
 
   // route for handlebars
   app.get("/users/:id", function(req, res) {
-    db.Users.findAll({
+    db.Users.findOne({
       where: {
-        id: req.params.id
+        username: req.params.id
       }
     }).then(function(data) {
       var treeObject = {
@@ -26,7 +26,17 @@ module.exports = function(app) {
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.json(req.users);
+    db.Users.findOne({
+      where: {
+        username: req.body.email
+      }
+    }).then(function(data) {
+      res.json(data.id);
+      console.log(data);
+    });
+    
+    
+    
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
