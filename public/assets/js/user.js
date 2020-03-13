@@ -1,6 +1,10 @@
 /* eslint-disable camelcase */
 /* eslint-disable indent */
 $(function() {
+  console.log(window.location.href);
+
+  var url = window.location.href;
+  UserId = url.charAt(url.length - 1);
     
   // nested list start --------------------------------------------
   $(".list-group-item").on("click", function() {
@@ -17,7 +21,8 @@ $(function() {
       var Hours = $("#new-task-hours").val().trim();
       var newTask = {
         Task_name: NewTaskName,
-        hoursWorked: Hours
+        hoursWorked: Hours,
+        UserId: UserId
       };
       $.ajax("/tasks", {
         type: "POST",

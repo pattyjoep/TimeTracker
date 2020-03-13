@@ -19,10 +19,13 @@ module.exports = function(app) {
     });
   });
 
+
   app.post("/tasks", function(req, res) {
+    console.log(req.body);
     db.Tasks.create({
       "Task_name": req.body.Task_name,
-      "hoursWorked": req.body.hoursWorked
+      "hoursWorked": req.body.hoursWorked,
+      "UserId": req.body.UserId
     }, function(result) {
       // Send back the ID of the new task
       res.json({ id: result.insertId });

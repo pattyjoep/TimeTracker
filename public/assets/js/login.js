@@ -27,13 +27,14 @@ $(document).ready(function() {
       email: $("#enter-email").val(),
       password: $("#enter-password").val()
     };
-    console.log(userData.email, userData.password);
+    
     if (!userData.email || !userData.password) {
       return;
     }
     loginUser(userData.email, userData.password);
     email.val("");
     password.val("");
+    
   });
 
   function loginUser(emailInput, passwordInput) {
@@ -45,6 +46,7 @@ $(document).ready(function() {
       .then(function(res) {
         console.log(res);
         window.location.replace("/users/" + res);
+        // var id = res;
         // If there's an error, log the error
       })
       .catch(function(err) {

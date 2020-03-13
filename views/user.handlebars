@@ -110,12 +110,14 @@
                       </tr>
                     </thead>
                     <tbody>
+                        {{#each Tasks}}
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Make Billboards</td>
-                        <td>3/15/20</td>
-                        <td>4</td>
+                        <th scope="row">{{id}}</th>
+                        <td>{{Task_name}}</td>
+                        <td>{{createdAt}}</td>
+                        <td>{{hoursWorked}}</td>
                       </tr>
+                      {{/each}}
                       
                     </tbody>
                 </table>
