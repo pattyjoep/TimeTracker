@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
   
-    "database": "dcjsvsrnakj4mh66",
+    "database": "time_veil_db",
     "host": "localhost",
     "dialect": "mysql"
   },
