@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TimeVeil · Login</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/logos/FinalFavicon.png" type="image/gif">
+    <!-- jQuery & bootstrap JS -->
+    <script src="assets/libraries/jquery-3.4.1.js"></script>
+    <script src="assets/libraries/bootstrapJS.js"></script>
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrapCSS.css">
+    <!-- propietary CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+</head>
+<body>
+    <nav id="new-navbar" class="navbar">
+      <img src="assets/logos/LogoFinal.png">
+      <a id="navbar-title" href="#">
+          Login
+      </a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+              Enter Email & Password
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                      <label for="enter-email">Email address</label>
+                      <input type="email" class="form-control" id="enter-email" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="enter-password">Password</label>
+                      <input type="password" class="form-control" id="enter-password" placeholder="Password">
+                      <small id="password-prompt" class="form-text hidden">ERROR! Please enter Email & Password.</small>
+                    </div>
+                    <button type="submit" id="login" class="btn btn-propietary hidden">Login</button>
+                    <p id="signup-link" class="">Don't have an account yet? <a href="signup.html">Sign-Up</a> now!</p>
+                  </form>
+            </div>
+          </div>
+    </div>
+
+    
+    <footer>TimeVeil &copy 2020</footer>
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>
+
+

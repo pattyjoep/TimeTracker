@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    
+    "database": "time_veil_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "password",
+    "database": "time_veil_test_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "password",
+    "database": "time_veil_production_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

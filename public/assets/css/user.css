@@ -1,0 +1,157 @@
+/* .col, .col-md-4, .col-md-8 {
+  border: 1px solid black;
+} */
+.container {
+  margin-top: 20px;
+  margin-bottom:100px;
+}
+body {
+    height:100%;
+}
+/* .btn {
+  width:75%;
+} */
+
+#new-navbar {
+  background-color:#c5dada;
+  border-bottom:3px solid rgb(78, 75, 75);
+}
+
+#navbar-title {
+    display:inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    color:#259b9e;
+    font-weight:bold;
+}
+img {
+  height:5rem;
+}
+
+
+
+.card-header {
+  background-color:#259b9e;
+    color:white;
+    font-weight:bold;
+}
+.hidden {
+    visibility: hidden;
+    /* display:none; */
+}
+
+
+/* styling for nested list start */
+.green-white {
+  border:2px solid rgb(78, 75, 75);
+  background-color:#259b9e;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-bottom:0px;
+}
+.client {
+  font-size:20px;
+  font-weight:bold;
+}
+
+a {
+  color:#259b9e;
+  font-weight:bold; 
+}
+a:hover {
+  color:#177c7e;
+}
+
+.just-padding {
+  padding: 15px;
+}
+
+.list-group.list-group-root {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-group.list-group-root .list-group {
+  margin-bottom: 0;
+}
+
+.list-group.list-group-root .list-group-item {
+  border-radius: 0;
+  border-width: 1px 0 0 0;
+}
+
+.list-group.list-group-root > .list-group-item:first-child {
+  border-top-width: 0;
+}
+
+.list-group.list-group-root > .list-group > .list-group-item {
+  padding-left: 30px;
+}
+
+.list-group.list-group-root > .list-group > .list-group > .list-group-item {
+  padding-left: 45px;
+}
+
+.list-group-item .glyphicon {
+  margin-right: 5px;
+}
+
+
+/* styling for nested list end */
+
+
+.green {
+  color: #259b9e;
+  font-weight:bold;
+}
+
+.btn-propietary {
+  background-color:#259b9e;
+  color:white;
+  border: 1px solid #259b9e;
+  /* margin-top:5px; */
+  margin-bottom:5px;
+}
+
+footer {
+    margin-top:80px;
+    border-top:3px solid rgb(78, 75, 75);
+    display: block;
+    position: fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        background-color:#259b9e;
+        color:white;
+        text-align:center;
+        padding: 10px 0px 10px 0px; 
+        font-weight:bold;
+}
+
+.btn-propietary:hover {
+  background-color: #177c7e;
+  border: 1px solid #259b9e;
+}
+
+.btn-propietary:active {
+  background-color: #0f6d6e;
+  border: 1px solid #259b9e;
+}
+
+.btn-propietary:visited {
+  background-color:#259b9e;
+  border: 1px solid #259b9e;
+}
+.btn-propietary:focus {
+  background-color:#259b9e;
+  border: 1px solid #259b9e;
+}
+
+
