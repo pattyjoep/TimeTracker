@@ -8,8 +8,8 @@ var exphbs = require("express-handlebars");
 var app = express();
 
 // new fix: ----------------------------------------
-const Handlebars = require("handlebars");
-const {allowInsecurePrototypeAccess} = require("@handlebars/allow-prototype-access");
+var Handlebars = require("handlebars");
+var {allowInsecurePrototypeAccess} = require("@handlebars/allow-prototype-access");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main", handlebars: allowInsecurePrototypeAccess(Handlebars) }));
 // new fix: ----------------------------------------
