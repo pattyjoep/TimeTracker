@@ -4,11 +4,7 @@ var passport = require("../config/passport");
 // var emailPrompt = require("../public/assets/js/signup")
 
 module.exports = function(app) {
-//   foo.findAll({
-//     where      : where,
-//     attributes : attributes,
-//     include    : [{ model: bar, attributes: attributes}]
-// }).success(function (result) {
+
   // route for handlebars
   app.get("/users/:id", function(req, res) {
     db.Users.findOne({
@@ -24,7 +20,7 @@ module.exports = function(app) {
         Tasks: data.dataValues.Tasks
       };
       
-      res.json(data.dataValues);
+      
       
       console.log("some word " + treeObject);
       res.render("user", treeObject);
