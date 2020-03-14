@@ -5,10 +5,18 @@ var session = require("express-session");
 var passport = require("./config/passport");
 // Set Handlebars
 var exphbs = require("express-handlebars");
-
 var app = express();
+
+// new fix: ----------------------------------------
+const Handlebars = require("handlebars");
+const {allowInsecurePrototypeAccess} = require("@handlebars/allow-prototype-access");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main", handlebars: allowInsecurePrototypeAccess(Handlebars) }));
+// new fix: ----------------------------------------
+
+
 app.use(express.static("public"));
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
 app.set("view engine", "handlebars");
 
 
