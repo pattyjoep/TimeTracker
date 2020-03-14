@@ -1,7 +1,4 @@
 "use strict";
-var password = require("./../mySQLpass");
-
-var password = require("./../mySQLpass");
 
 var fs = require("fs");
 var path = require("path");
@@ -15,6 +12,7 @@ var db = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
+  var password = require("./../mySQLpass");
   var sequelize = new Sequelize(config.database, config.username, password, config);
 }
 
