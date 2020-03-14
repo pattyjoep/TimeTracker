@@ -20,8 +20,6 @@ module.exports = function(app) {
         Tasks: data.dataValues.Tasks
       };
       
-      
-      
       console.log("some word " + treeObject);
       res.render("user", treeObject);
     });

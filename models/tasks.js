@@ -11,12 +11,12 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER
     },
     createdAt: {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+      type: DataTypes.DATEONLY,
+      defaultValue: new Date()
     },
     updatedAt: {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+      type: DataTypes.DATEONLY,
+      defaultValue: new Date()
     }
   });
     
