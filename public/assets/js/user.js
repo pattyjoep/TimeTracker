@@ -1,10 +1,16 @@
 /* eslint-disable camelcase */
 /* eslint-disable indent */
 $(function() {
-  console.log(window.location.href);
+  
+  
 
   var url = window.location.href;
-  UserId = url.charAt(url.length - 1);
+  var UserId = url.slice(37, 10000);
+  // http://localhost:8080/users/11 -- 28
+  // https://timeveil.herokuapp.com/users/3 -- 37
+
+  console.log("Full Url: " + url);
+  console.log("UserId: " + UserId);
     
   // nested list start --------------------------------------------
   $(".list-group-item").on("click", function() {
