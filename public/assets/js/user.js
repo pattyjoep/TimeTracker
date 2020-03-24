@@ -2,25 +2,25 @@
 /* eslint-disable indent */
 $(function() {
 
-  // // for localhost8080: ---------------------------------start
-  //   var url = window.location.href;
-  //   var UserId = url.slice(28, 10000);
-  //   // http://localhost:8080/users/11 -- 28
-    
-  //   console.log("Full Url: " + url);
-  //   console.log("UserId: " + UserId);
-  // // for localhost8080: ---------------------------------end
-
-  // for herokuapp: ---------------------------------start
-  
+  // for localhost8080: ---------------------------------start
     var url = window.location.href;
-    var UserId = url.slice(37, 10000);
+    var UserId = url.slice(28, 10000);
+    // http://localhost:8080/users/11 -- 28
     
-    // https://timeveil.herokuapp.com/users/3 -- 37
-
     console.log("Full Url: " + url);
     console.log("UserId: " + UserId);
-  // for herokuapp: ---------------------------------end
+  // for localhost8080: ---------------------------------end
+
+  // // for herokuapp: ---------------------------------start
+  
+  //   var url = window.location.href;
+  //   var UserId = url.slice(37, 10000);
+    
+  //   // https://timeveil.herokuapp.com/users/3 -- 37
+
+  //   console.log("Full Url: " + url);
+  //   console.log("UserId: " + UserId);
+  // // for herokuapp: ---------------------------------end
     
   // nested list start --------------------------------------------
   $(".list-group-item").on("click", function() {
@@ -45,7 +45,13 @@ $(function() {
         data: newTask
       }).then(
         function() {
-          console.log("created new task" + newTask);
+          // close modal here
+          $(".modal").modal("hide");
+        }
+      ).then(
+        function() {
+          // reload location here
+          console.log("created new task" + newTask.Task_name);
           location.reload();
         }
       );
