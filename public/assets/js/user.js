@@ -1,16 +1,26 @@
 /* eslint-disable camelcase */
 /* eslint-disable indent */
 $(function() {
-  
-  
 
-  var url = window.location.href;
-  var UserId = url.slice(37, 10000);
-  // http://localhost:8080/users/11 -- 28
-  // https://timeveil.herokuapp.com/users/3 -- 37
+  // // for localhost8080: ---------------------------------start
+  //   var url = window.location.href;
+  //   var UserId = url.slice(28, 10000);
+  //   // http://localhost:8080/users/11 -- 28
+    
+  //   console.log("Full Url: " + url);
+  //   console.log("UserId: " + UserId);
+  // // for localhost8080: ---------------------------------end
 
-  console.log("Full Url: " + url);
-  console.log("UserId: " + UserId);
+  // for herokuapp: ---------------------------------start
+  
+    var url = window.location.href;
+    var UserId = url.slice(37, 10000);
+    
+    // https://timeveil.herokuapp.com/users/3 -- 37
+
+    console.log("Full Url: " + url);
+    console.log("UserId: " + UserId);
+  // for herokuapp: ---------------------------------end
     
   // nested list start --------------------------------------------
   $(".list-group-item").on("click", function() {
