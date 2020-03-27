@@ -1,10 +1,26 @@
 /* eslint-disable camelcase */
 /* eslint-disable indent */
 $(function() {
-  console.log(window.location.href);
 
-  var url = window.location.href;
-  UserId = url.charAt(url.length - 1);
+  // // for localhost8080: ---------------------------------start
+  //   var url = window.location.href;
+  //   var UserId = url.slice(28, 10000);
+  //   // http://localhost:8080/users/11 -- 28
+    
+  //   console.log("Full Url: " + url);
+  //   console.log("UserId: " + UserId);
+  // // for localhost8080: ---------------------------------end
+
+  // for herokuapp: ---------------------------------start
+  
+    var url = window.location.href;
+    var UserId = url.slice(37, 10000);
+    
+    // https://timeveil.herokuapp.com/users/3 -- 37
+
+    console.log("Full Url: " + url);
+    console.log("UserId: " + UserId);
+  // for herokuapp: ---------------------------------end
     
   // nested list start --------------------------------------------
   $(".list-group-item").on("click", function() {
@@ -13,6 +29,7 @@ $(function() {
         .toggleClass("glyphicon-chevron-down");
     });
   // nested list end ----------------------------------------------
+
 
   // creating a new task
   $(".task-modal-save").on("click", function(event) {
@@ -27,12 +44,13 @@ $(function() {
       $.ajax("/tasks", {
         type: "POST",
         data: newTask
-      }).then(
-        function() {
-          console.log("created new task" + newTask);
-          location.reload();
-        }
-      );
+      });
     });
-      
+    
+    
+    $("#task-modal").on("hide.bs.modal", () => {
+      location.reload();
+    });
+
+
   });
